@@ -1,0 +1,33 @@
+.fluid-container{
+    margin-top: 2.6%;
+    margin-left: 4%;
+    margin-right: 4%;
+    
+}
+
+body{
+    background-color:paleturquoise;
+}
+
+.card:hover{
+    -webkit-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+     box-shadow: -1px 9px 40px -12px rgba(0,0,0,0.75);
+}
+
+.heading{
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.lowheading{
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 3px;
+}
+
+.row :hover{
+    transition: transform .2s;
+    transform: scale(1.02) ;
+
+}

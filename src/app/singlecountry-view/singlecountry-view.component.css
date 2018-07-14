@@ -1,0 +1,8 @@
+.flag{
+    max-height: 80vh;
+    padding: 50px;
+}
+
+.container-fluid{
+    background-color: paleturquoise;
+}

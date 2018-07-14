@@ -1,0 +1,120 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+ 
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+  
+</head>
+
+<body>
+    
+    <ngx-spinner
+   bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  loadingText="Loading..."
+  type="ball-beat">
+    </ngx-spinner>
+
+    <div style="text-align: center">
+
+
+        <h1 class="heading">REST COUNTRIES</h1>
+        <h2 class="lowheading">ALL REGIONS</h2>
+        <!--  <img src="https://blog.shevarezo.fr/uploads/posts/bulk/V2NukMEH_api_restcountries.png" 
+                    style="height: 18vh ;width: 80vw;">-->
+
+
+
+    </div>
+
+
+
+
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Bootstrap Card -->
+                <div class="card">
+                    <img src="https://previews.123rf.com/images/horseman82/horseman821704/horseman82170400035/76711442-africa-sunset-illustration-vector-postcard-with-wild-animals-silhouette.jpg"
+                        alt="Card One" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Africa</h5>
+                        <p class="card-text">
+                            Africa is the world's second largest and second most-populous continent. At about 30.3 million km² including adjacent islands,
+                            it covers 6% of Earth's total surface area and 20% of its land area..
+                        </p>
+                        <a [routerLink]="['/all-countries-view/africa']" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="http://www.ilass.org/2/images/map_big.png" alt="Card Two" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">America</h5>
+                        <p class="card-text">
+                            The Americas comprise the totality of the continents of North and South America. Together, they make up most of the land
+                            in Earth's western hemisphere and comprise the New World
+                        </p>
+                        <a [routerLink]="['/all-countries-view/americas']" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 ">
+                <div class="card">
+                    <img src="https://img00.deviantart.net/2392/i/2016/242/0/c/alternative_map_of_asia_by_tovarishzoeymaps-dafvucc.png" alt="Card Two"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Asia</h5>
+                        <p class="card-text">
+                            Asia is Earth's largest and most populous continent, located primarily in the Eastern and Northern Hemispheres.
+                        </p>
+                        <a [routerLink]="['/all-countries-view/asia']" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <br>
+            <br>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://image.freepik.com/free-vector/europe-map-with-countries_23-2147620159.jpg" alt="Card Two" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Europe</h5>
+                        <p class="card-text">
+                            Europe is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere.
+                        </p>
+                        <a [routerLink]="['/all-countries-view/europe']" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSctWRG1srZDttEAOJSZug5JJ3TyvDLUvOKyeY5aTWvGPZeiipc" alt="Card Two"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Oceania</h5>
+                        <p class="card-text">
+                            Oceania is a geographic region comprising Melanesia, Micronesia, Polynesia and Australasia.
+                        </p>
+                        <a [routerLink]="['/all-countries-view/oceania']" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
