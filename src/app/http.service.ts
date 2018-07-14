@@ -11,20 +11,20 @@ import 'rxjs/add/operator/do';
   providedIn: 'root'
 })
 export class HttpService {
-  
-   
-   
-  constructor(public http: HttpClient) {
-   console.log("constructor called")
-   }
 
-   private handleError(err: HttpErrorResponse) {
+
+
+  constructor(public http: HttpClient) {
+    console.log("constructor called")
+  }
+
+  private handleError(err: HttpErrorResponse) {
     console.log("Handle error called");
     console.log(err.message);
     return Observable.throw(err.message);
   }
 
-
+  // API call for All Countries 
   public getAllCountries(region) {
 
     let myResponse = this.http.get(`https://restcountries.eu/rest/v2/region/${region}`)
@@ -32,6 +32,7 @@ export class HttpService {
     return myResponse
   }
 
+  // API call for A single Country
   public singleCountry(currentCountry) {
 
     let myResponse = this.http.get(`https://restcountries.eu/rest/v2/name/${currentCountry}?fullText=true`)
@@ -39,6 +40,7 @@ export class HttpService {
     return myResponse
   }
 
+  // API call for getting countries with same currency code
   public getCurrency(currencyCode) {
     console.log(currencyCode)
 
@@ -47,6 +49,7 @@ export class HttpService {
     return myResponse
   }
 
+  // API call for getting countries with same Language code
   public getLanguage(languageCode) {
 
     let myResponse = this.http.get(`https://restcountries.eu/rest/v2/lang/${languageCode}`)
@@ -54,4 +57,4 @@ export class HttpService {
     return myResponse
   }
 
-  }
+}

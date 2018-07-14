@@ -13,53 +13,51 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class SinglecountryViewComponent implements OnInit {
 
-   public currentCountry;
-   public countries;
-    
-  constructor(public _route:ActivatedRoute, public http:HttpService,
-              public loc:Location, private toastr:ToastrService,
-              private spinner: NgxSpinnerService  ) {
-                
-                console.log("constructor called")
-               }
+  public currentCountry;
+  public countries;
+
+  constructor(public _route: ActivatedRoute, public http: HttpService,
+    public loc: Location, private toastr: ToastrService,
+    private spinner: NgxSpinnerService) {
+
+    console.log("constructor called")
+  }
 
   ngOnInit() {
 
 
-           /** spinner starts on init */
-           this.spinner.show();
- 
-           setTimeout(() => {
-               /** spinner ends after 5 seconds */
-               this.spinner.hide();
-           }, 1200);
-   
-    
- 
+    /** spinner starts on init */
+    this.spinner.show();
 
-    let country = this._route.snapshot.paramMap.get('current_country')   
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 1200);
+
+    // geeting curreny_country code
+    let country = this._route.snapshot.paramMap.get('current_country')
     console.log(country)
-  
-    this.toastr.success(`Welcome to ${country} `,'Landed Successfully',{timeOut:2000,});
 
-  this.http.singleCountry(country).subscribe(
-      
-    data =>{
-      this.currentCountry = data;
-      console.log(this.currentCountry)
-    }
-  
-  )
+    this.toastr.success(`Welcome to ${country} `, 'Landed Successfully', { timeOut: 2000, });
 
-  
+    this.http.singleCountry(country).subscribe(
+
+      data => {
+        this.currentCountry = data;
+        console.log(this.currentCountry)
+      }
+
+    )
+
+
   }
-  
 
 
-  public goBackToPreviousLocation(){
+
+  public goBackToPreviousLocation() {
     this.loc.back();
   }
-      
 
-  }
+
+}
 
